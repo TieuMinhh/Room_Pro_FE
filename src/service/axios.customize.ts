@@ -1,8 +1,11 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
+const API_URL = import.meta.env.VITE_PUBLIC_API_URL || 'http://localhost:8081/';
+
+
 const axiosCustomize = axios.create({
-    baseURL: 'http://localhost:8081/',
+    baseURL: API_URL,
     timeout: 20000,
     withCredentials: true
 })
